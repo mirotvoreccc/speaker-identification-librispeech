@@ -1,0 +1,162 @@
+{
+  "task": "closed-set speaker identification",
+  "dataset": "LibriSpeech train-clean-100",
+  "seed": 42,
+  "speakers": 10,
+  "selected_speaker_ids": [
+    32,
+    254,
+    1447,
+    1737,
+    1898,
+    2289,
+    2911,
+    3699,
+    4014,
+    4195
+  ],
+  "utterances_per_speaker": 40,
+  "samples": {
+    "train": 200,
+    "validation": 100,
+    "test": 100
+  },
+  "chapter_allocation": {
+    "32": {
+      "train": [
+        "21625",
+        "21634"
+      ],
+      "validation": [
+        "4137"
+      ],
+      "test": [
+        "21631"
+      ]
+    },
+    "254": {
+      "train": [
+        "127705",
+        "27760"
+      ],
+      "validation": [
+        "12312"
+      ],
+      "test": [
+        "145458"
+      ]
+    },
+    "1447": {
+      "train": [
+        "130552",
+        "17506"
+      ],
+      "validation": [
+        "130551"
+      ],
+      "test": [
+        "130550"
+      ]
+    },
+    "1737": {
+      "train": [
+        "142397",
+        "146161"
+      ],
+      "validation": [
+        "148989"
+      ],
+      "test": [
+        "142396"
+      ]
+    },
+    "1898": {
+      "train": [
+        "145720",
+        "145724"
+      ],
+      "validation": [
+        "145702"
+      ],
+      "test": [
+        "145715"
+      ]
+    },
+    "2289": {
+      "train": [
+        "152254",
+        "152257"
+      ],
+      "validation": [
+        "152258"
+      ],
+      "test": [
+        "152253"
+      ]
+    },
+    "2911": {
+      "train": [
+        "15084",
+        "7601"
+      ],
+      "validation": [
+        "12359"
+      ],
+      "test": [
+        "15045"
+      ]
+    },
+    "3699": {
+      "train": [
+        "175950",
+        "19401"
+      ],
+      "validation": [
+        "47246"
+      ],
+      "test": [
+        "19402"
+      ]
+    },
+    "4014": {
+      "train": [
+        "186179",
+        "186183"
+      ],
+      "validation": [
+        "186175"
+      ],
+      "test": [
+        "186176"
+      ]
+    },
+    "4195": {
+      "train": [
+        "17507",
+        "186237"
+      ],
+      "validation": [
+        "186236"
+      ],
+      "test": [
+        "186238"
+      ]
+    }
+  },
+  "validation": {
+    "logistic_regression": {
+      "accuracy": 0.9,
+      "macro_f1": 0.8722
+    },
+    "linear_svm": {
+      "accuracy": 0.9,
+      "macro_f1": 0.8667
+    }
+  },
+  "selected_model": "logistic_regression",
+  "test": {
+    "accuracy": 0.88,
+    "macro_f1": 0.8678
+  },
+  "limitations": "The same speakers occur in train and test, but chapters are disjoint. This is not unseen-speaker verification."
+}
